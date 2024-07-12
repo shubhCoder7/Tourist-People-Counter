@@ -1,15 +1,23 @@
-# Getting Started
-Install the dependencies and run the project
-```
-npm install
-npm start
-```
+# Tourist/People Counter Project
 
-Head over to https://vitejs.dev/ to learn more about configuring vite
+This project is a simple web application that allows you to count and save the number of tourists or people passing by. It includes basic functionality to increment the count and save previous counts.
 
+## Features
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+- Increment the count with a click of a button.
+- Save the current count and display previous counts.
+- Responsive design that adapts to different screen sizes.
 
-Happy Coding!
+## Technologies Used
+
+- HTML5
+- CSS3 (with some advanced styling for buttons)
+- JavaScript
+
+## Setup Instructions
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/your-username/tourist-people-counter.git
+   cd tourist-people-counter
