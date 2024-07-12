@@ -1,0 +1,148 @@
+body {
+  background-image: url("https://images.unsplash.com/photo-1519922639192-e73293ca430e?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+h2 {
+  font-size: 50px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #ffcccb;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#save-el {
+  font-size: 18px;
+  color: #90ee90;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+}
+
+#increment-btn,
+#save-btn {
+  margin: 10px;
+  padding: 15px 40px;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+}
+
+#increment-btn::after,
+#save-btn::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+#increment-btn::before,
+#save-btn::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+#increment-btn:hover::before,
+#save-btn:hover::before {
+  opacity: 1;
+}
+
+#increment-btn:active:after,
+#save-btn:active:after {
+  background: transparent;
+}
+
+#increment-btn:active,
+#save-btn:active {
+  color: #000;
+  font-weight: bold;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  #increment-btn,
+  #save-btn {
+    width: 150px;
+    padding: 10px 20px;
+  }
+  #save-el {
+    font-size: 16px;
+  }
+}
